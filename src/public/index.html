@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="" class="navbar-brand ms-2" id="mover">ARjs</a>
+      <div>
+        <input type="button" class="btn btn-success" value="+" onclick="maximize()">
+        <input type="button" class="btn btn-warning" value="-" onclick="minimize()">
+        <input class="btn btn-danger me-1" type="button" onclick="exit()" value="X">     
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row">    
+        <div class="col-6">
+          <div class="row">
+            <video class="me-5" id="webcam" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="1280" height="720" style="display: none;"></canvas>
+          </div>
+          <div class="container row">
+            <input type="button" class="btn btn-primary" id="capturar" value="Capturar"/>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <img id="foto" width="640" height="480"/>
+          </div>
+          <div class="container row">
+            <input type="button" class="btn btn-primary" onclick="openPhoto()" value="Abrir"/>
+          </div>
+        </div>
+      </div>     
+    </div>
+
+    <div class="container d-flex justify-content-center">
+   
+    </div>
+
+      <script src="renderer.js"></script>
+    </body>
+</html>
